@@ -1,0 +1,47 @@
+//共性
+var sound = {
+  rightAudio:function(){
+    cc.audioEngine.playEffect(res.Right_audio);
+  },
+  wrongAudio:function(){
+    cc.audioEngine.playEffect(res.Wrong_audio);
+  },
+  winAudio:function(){
+    cc.audioEngine.playEffect(res.Win_audio);
+  },
+  starAudio:function(){
+    cc.audioEngine.playEffect(res.Star_audio);
+  },
+  buttonAudio:function(){
+    cc.audioEngine.playEffect(res.Button_audio);
+  },
+  stopAudio : function(){
+    cc.audioEngine.stopMusic();
+  },
+  //个性
+  gameBgAudio:function(){
+    cc.audioEngine.playMusic(res.GameBg_audio,true);
+    cc.audioEngine.setMusicVolume(0.2);  
+  },
+  hintAudio:function(){
+    cc.audioEngine.playEffect(res.Hint_audio);
+  },
+      quesOneAudio:function(){
+    cc.audioEngine.playEffect(res.QuesOne_audio);
+  },
+  quesTwoAudio:function(){
+    cc.audioEngine.playEffect(res.QuesTwo_audio);
+  },
+  quesThreeAudio:function(){
+    cc.audioEngine.playEffect(res.QuesThree_audio);
+  },
+  quesFourAudio:function(){
+    cc.audioEngine.playEffect(res.QuesFour_audio);
+  },
+  quesFiveAudio:function(){
+    cc.audioEngine.playEffect(res.QuesFive_audio);
+  },
+  quesSixAudio:function(){
+    cc.audioEngine.playEffect(res.QuesSix_audio);
+  },
+}

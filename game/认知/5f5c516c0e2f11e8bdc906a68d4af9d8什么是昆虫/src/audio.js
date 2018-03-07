@@ -1,0 +1,62 @@
+//共性
+var sound = {
+  rightAudio:function(){//正确
+    cc.audioEngine.playEffect(res.Right_audio);
+  },
+  wrongAudio:function(){//错误
+    cc.audioEngine.playEffect(res.Wrong_audio);
+  },
+  winAudio:function(){//完成 欢呼
+    cc.audioEngine.playEffect(res.Win_audio);
+  },
+  starAudio:function(){//飞星
+    cc.audioEngine.playEffect(res.Star_audio);
+  },
+  buttonAudio:function(){//点击
+    cc.audioEngine.playEffect(res.Button_audio);
+  },
+  stopAudio : function(){//停止
+    cc.audioEngine.stopMusic();
+  },
+  stopEff:function () {//停止播放音效
+     cc.audioEngine.stopAllEffects();
+  },
+  //个性
+  gameBgAudio:function(){//背景
+    cc.audioEngine.playMusic(res.GameBg_audio,true);
+    cc.audioEngine.setMusicVolume(0.2);  
+  },
+  hintAudio:function(){//提示
+    cc.audioEngine.playEffect(res.seesaw_problem);
+  },
+  butterAudio:function(){//蝴蝶
+    cc.audioEngine.playEffect(res.ButterFly_audio);
+  },
+  honeyAudio:function(){//蜜蜂
+     cc.audioEngine.playEffect(res.Honeybee_audio);
+  },
+  antAudio:function(){
+      cc.audioEngine.playEffect(res.Creeping_audio);
+  },
+  beeAudio:function(){
+      cc.audioEngine.playEffect(res.Bee_audio);
+  },
+  legsAudio:function(){
+      cc.audioEngine.playEffect(res.Legs_audio);
+  },
+  abdomenAudio:function(){
+      cc.audioEngine.playEffect(res.Abdomen_audio);
+  },
+  chestAudio:function(){
+      cc.audioEngine.playEffect(res.Chest_audio);
+  },
+  headAudio:function(){
+      cc.audioEngine.playEffect(res.Head_audio);
+  },
+  wingAudio:function(){
+      cc.audioEngine.playEffect(res.Wing_audio);
+  },
+  ommaAudio:function(){
+      cc.audioEngine.playEffect(res.Omma_audio);
+  }
+}

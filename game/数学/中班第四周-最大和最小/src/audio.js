@@ -1,0 +1,57 @@
+//共性
+var sound = {
+  rightAudio:function(){
+    cc.audioEngine.playEffect(res.Right_audio);
+  },
+  wrongAudio:function(){
+    cc.audioEngine.playEffect(res.Wrong_audio);
+  },
+  winAudio:function(){
+    cc.audioEngine.playEffect(res.Win_audio);
+  },
+  starAudio:function(){
+    cc.audioEngine.playEffect(res.Star_audio);
+  },
+  buttonAudio:function(){
+    cc.audioEngine.playEffect(res.Button_audio);
+  },
+  stopAudio : function(){
+    cc.audioEngine.stopMusic();
+  },
+  //个性
+  gameBgAudio:function(){
+    cc.audioEngine.playMusic(res.GameBg_audio,true);
+    cc.audioEngine.setMusicVolume(0.2);  
+  },
+  hintAudio:function(){
+    cc.audioEngine.playEffect(res.Hint_audio);
+  },
+  //单独
+  boxOpenAudio:function(){
+  		cc.audioEngine.playEffect(res.BoxOpen_audio);
+  },
+  carHornAudio:function(){
+  		cc.audioEngine.playEffect(res.CarHorn_audio);
+  },
+  carStartAudio:function(){
+  		cc.audioEngine.playEffect(res.CarStart_audio);
+  },
+  planAudio:function(){
+  		cc.audioEngine.playEffect(res.Plan_audio);
+  },
+  jumpAudio:function(){
+  		cc.audioEngine.playEffect(res.Jump_audio);
+  },
+  quesOneAudio:function(){
+    cc.audioEngine.playEffect(res.QuesOne_audio);
+  },
+  quesTwoAudio:function(){
+    cc.audioEngine.playEffect(res.QuesTwo_audio);
+  },
+  quesThreeAudio:function(){
+    cc.audioEngine.playEffect(res.QuesThree_audio);
+  },
+  quesFourAudio:function(){
+    cc.audioEngine.playEffect(res.QuesFour_audio);
+  }
+}

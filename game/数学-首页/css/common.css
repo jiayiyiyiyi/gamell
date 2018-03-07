@@ -1,0 +1,117 @@
+@charset "UTF-8";
+* {
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body,ul,li {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+html{
+  width:100%;
+  height:100%;
+}
+body {
+  font-size: 12px;
+  font-family: ubuntu, helvetica, arial;
+  overflow: hidden; /* this is important to prevent the whole page to bounce */
+  width:100%;
+  height:100%;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a, u {
+  text-decoration: none;
+}
+
+em, i {
+  font-style: normal;
+}
+
+b, strong {
+  font-weight: 100;
+}
+
+img {
+  border: 0;
+  display: block;
+}
+
+span {
+  display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+header,.line-shadow,section,.mask{
+  width:100%;
+}
+.content,footer,.svg{
+  width: 10rem;
+  margin:0 auto;
+}
+@media screen and (max-width: 2050px) {
+  html {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 1368px) {
+  html {
+    font-size: 66.7px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 814px) {
+  html {
+    font-size: 39.65px;
+  }
+}
+@media screen and (max-width: 738px) {
+  html {
+    font-size: 35.94px;
+  }
+}
+@media screen and (max-width: 734px) {
+  html {
+    font-size: 35.74px;
+  }
+}
+@media screen and (max-width: 669px) {
+  html {
+    font-size: 32.57px;
+  }
+}
+@media screen and (max-width: 642px) {
+  html {
+    font-size: 31.25px;
+  }
+}
+@media screen and (max-width: 570px) {
+  html {
+    font-size: 27.73px;
+  }
+}
+@media screen and (max-width: 482px) {
+  html {
+    font-size: 23.44px;
+  }
+}

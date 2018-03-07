@@ -1,0 +1,47 @@
+//共性
+var sound = {
+  rightAudio:function(){
+    cc.audioEngine.playEffect(res.Right_audio);
+  },
+  wrongAudio:function(){
+    cc.audioEngine.playEffect(res.Wrong_audio);
+  },
+  winAudio:function(){
+    cc.audioEngine.playEffect(res.Win_audio);
+  },
+  starAudio:function(){
+    cc.audioEngine.playEffect(res.Star_audio);
+  },
+  buttonAudio:function(){
+    cc.audioEngine.playEffect(res.Button_audio);
+  },
+  stopAudio : function(){
+    cc.audioEngine.stopMusic();
+  },
+  //个性
+  gameBgAudio:function(){
+    cc.audioEngine.playMusic(res.GameBg_audio,true);
+    cc.audioEngine.setMusicVolume(0.2);  
+  },
+  hintAudio:function(){
+    cc.audioEngine.playEffect(res.Hint_audio);
+  },
+  startTipAudio:function(){
+    cc.audioEngine.playEffect(res.StartTip_audio);
+  },
+  bigAudio:function(){
+    cc.audioEngine.playEffect(res.Big_audio);
+  },
+  smallAudio:function(){
+    cc.audioEngine.playEffect(res.Small_audio);
+  },
+  lionAudio:function(){
+    cc.audioEngine.playEffect(res.Lion_audio);
+  },
+  mouseAudio:function(){
+    cc.audioEngine.playEffect(res.Mouse_audio);
+  },
+  kindsAudio:function(){
+    cc.audioEngine.playEffect(res.Kinds_audio);
+  },
+}

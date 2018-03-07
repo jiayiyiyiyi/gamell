@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>首页</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+    <body>
+    	<div class="out" style="display: block">
+			<div class="content">
+				<div class="box">
+					<img src="image/checkpoint_mas.jpg" alt="">
+					<div class="one"></div>
+					<div class="two"></div>
+					<div class="three"></div>
+					<div class="four"></div>
+				</div>
+			</div>
+		</div>
+		<div id="scroller" class="contOne" style="display: none">
+			<div class="map"></div>
+			<div class="game">
+				<img src="image/1.png" alt="" class="imgs" >
+				<div class="model">
+					<img src="image/completed.png" alt="" class="change">
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script>
+            var sizeH = document.documentElement.clientHeight;
+            var sizeW = document.documentElement.clientWidth;
+            var x = sizeH-3*sizeW/4;
+            console.log(x);
+            var posArrOne = [
+                {x:2.88,y:3.79},{x:6.26,y:3.81},{x:9.56,y:3.88},{x:9.56,y:7.01},{x:9.57,y:10.04},
+                {x:12.53,y:10.04},{x:12.53,y:7.06},{x:15.18,y:7.06},{x:17.75,y:7.07},{x:17.75,y:10.03}
+            ]
+            var posArrTwo = [
+                {x:17.63,y:3.79},{x:13.9,y:3.79},{x:9.71,y:3.79},{x:5.69,y:3.79},{x:1.96,y:3.86},
+                {x:3.55,y:5.98},{x:1.95,y:8.12},{x:5.72,y:8.28},{x:9.75,y:8.26},{x:13.94,y:8.26}
+            ]
+            var posArrThree = [
+                {x:1.31,y:8.35},{x:4.46,y:8.33},{x:7.54,y:8.27},{x:7.6,y:4.93},{x:10.56,y:4.93},
+                {x:13.58,y:4.93},{x:12.09,y:8.91},{x:15.03,y:8.91},{x:16.67,y:7.01},{x:16.66,y:4.05}
+            ]
+            var posArrFour = [
+                {x:16.66,y:9.14},{x:16.58,y:5.88},{x:14.11,y:5.88},{x:11.41,y:5.88},{x:8.83,y:5.88},
+                {x:8.73,y:9.69},{x:6.26,y:9.69},{x:3.75,y:9.69},{x:3.71,y:6.85},{x:3.71,y:3.92}
+            ]
+            var str = '';
+            str += '<div class="map"></div>';
+            for(var i =0;i < posArrOne.length;i++){
+                str +='<div class="game">'
+                    +	'<img src="image/1.png" alt="" class="imgs" >'
+                    +	'<div class="model">'
+                    +		'<img src="image/completed.png" alt="" class="change">'
+                    +	'</div>'
+                    +'</div>'
+            }
+            $("#scroller").html(str);
+            var fontsize = $("html").css("font-size");
+            var s = fontsize.replace(/[px]/g,"");
+
+            $(".game").each(function(i, v) {
+                $(v).css({"left" : posArrOne[i].x +"rem", "top": (posArrOne[i].y + x/2/s) + "rem"})
+            })
+
+            var mh = $(".map").position().top;
+            $(".map").css("top",mh+x/10);
+
+            var h = $(".box").position().top;
+            $(".box").css("top",h+x/2);
+		</script>
+
+    </body>
+</html>

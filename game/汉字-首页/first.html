@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>汉字分页1</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+    <body>
+		<div id="scroller" class="contOne">
+			<div class="map"></div>
+			<div class="game">
+				<img src="image/1.png" alt="" class="imgs" >
+				<div class="model">
+					<img src="image/completed.png" alt="" class="change">
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/zepto.js"></script>
+
+    </body>
+	<script>
+        var sizeH = document.documentElement.clientHeight;
+        var sizeW = document.documentElement.clientWidth;
+        var x = sizeH-3*sizeW/4;
+        console.log(x);
+        var posArr = [
+            {x:2.54,y:4.91},{x:6.06,y:4.91},{x:9.82,y:4.91},{x:9.82,y:7.8},{x:13.96,y:7.8},{x:17.88,y:5.5}
+        ]
+		var str = '';
+        str += '<div class="map"></div>';
+		for(var i =0;i < posArr.length;i++){
+            str +='<div class="game">'
+                +	'<img src="image/1.png" alt="" class="imgs" >'
+                +	'<div class="model">'
+                +		'<img src="image/completed.png" alt="" class="change">'
+                +	'</div>'
+				+'</div>'
+		}
+		$("#scroller").html(str);
+        var fontsize = $("html").css("font-size");
+        var s = fontsize.replace(/[px]/g,"");
+
+        $(".game").each(function(i, v) {
+            $(v).css({"left" : posArr[i].x +"rem", "top": (posArr[i].y + x/2/s) + "rem"})
+        })
+        var mh = $(".map").position().top;
+        $(".map").css("top",mh+x/10);
+	</script>
+</html>
